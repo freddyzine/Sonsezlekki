@@ -1,1 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SON SEZCAP Meeting Agenda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --son-green:#007A33; --son-gold:#FFD700; --muted:#59656a; --radius:12px; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f9fbf9;color:#062a20;line-height:1.5}
+    .container{max-width:1100px;margin:30px auto;padding:20px}
+    header{display:flex;align-items:center;gap:20px;background:linear-gradient(90deg,#e9f5ef,#fff);padding:20px;border-radius:var(--radius);box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+    .logo img{width:80px;height:80px;object-fit:contain}
+    h1{color:var(--son-green);font-size:22px}
+    .ribbon{background:rgba(0,122,51,0.1);color:var(--son-green);padding:6px 14px;border-radius:30px;display:inline-block;margin-top:6px;font-weight:600}
+    main{display:grid;grid-template-columns:1fr 300px;gap:20px;margin-top:25px}
+    .agenda{background:white;padding:20px;border-radius:var(--radius);box-shadow:0 5px 20px rgba(0,0,0,0.05)}
+    .agenda h2{color:var(--son-green);margin-bottom:10px}
+    .event{margin-bottom:15px;padding-left:15px;border-left:3px solid rgba(0,122,51,0.2);opacity:0;transform:translateY(10px);transition:all .6s ease}
+    .event.show{opacity:1;transform:none}
+    .time{font-weight:700;color:var(--son-green)}
+    .title{font-weight:600;margin:3px 0;color:#0a3627}
+    .who{font-size:13px;color:var(--muted)}
+    aside{display:flex;flex-direction:column;gap:16px}
+    .card{background:white;padding:15px;border-radius:var(--radius);box-shadow:0 5px 20px rgba(0,0,0,0.05)}
+    .prayer{border-left:4px solid var(--son-gold);background:#fffaf0}
+    .download{text-align:center;margin:25px 0}
+    .btn{background:linear-gradient(90deg,var(--son-green),#009a50);color:#fff;padding:12px 18px;border:none;border-radius:10px;font-weight:600;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:transform .2s ease}
+    .btn:hover{transform:translateY(-3px)}
+    footer{background:rgba(0,122,51,0.08);text-align:center;padding:15px;border-radius:10px;color:#04462f;font-weight:600;margin-top:10px}
+    @media(max-width:900px){main{grid-template-columns:1fr}header{flex-direction:column;text-align:center}.logo img{width:70px;height:70px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><img src="son.png" alt="SON Logo"></div>
+      <div>
+        <h1>Standards Organisation of Nigeria</h1>
+        <p>Meeting with Operators of the Special Economic Zones — SEZCAP</p>
+        <div class="ribbon">Lekki Free Trade Zone • 7 October 2025</div>
+      </div>
+    </header>
 
+    <main>
+      <section class="agenda">
+        <h2>Meeting Agenda</h2>
+        <div class="event"><div class="time">9.30am</div><div class="title">Welcoming / Registration</div><div class="who">All</div></div>
+        <div class="event"><div class="time">10:00am</div><div class="title">Opening Prayer (3rd Stanza of National Anthem)</div><div class="who">All</div></div>
+        <div class="event"><div class="time">10:05am</div><div class="title">Introduction of Participants</div><div class="who">All</div></div>
+        <div class="event"><div class="time">10:20am</div><div class="title">Welcome Address</div><div class="who">Director General / Chief Executive, SON</div></div>
+        <div class="event"><div class="time">10:35am</div><div class="title">Goodwill Message</div><div class="who">Managing Director – NEPZA</div></div>
+        <div class="event"><div class="time">10:45am</div><div class="title">Group Photograph</div><div class="who">All</div></div>
+        <div class="event"><div class="time">11:00am</div><div class="title">Presentations on:</div><div class="who">• SEZCAP — Head (SEZCAP)<br>• SON Services — Head (Marketing Dept)<br>• E-SEZCAP Platform — SON ICT</div></div>
+        <div class="event"><div class="time">11:30am</div><div class="title">Questions & Feedback</div><div class="who">All</div></div>
+        <div class="event"><div class="time">12:30pm</div><div class="title">Vote of Thanks</div><div class="who">HoD (National Product Certification Dept)</div></div>
+        <div class="event"><div class="time">12:30pm</div><div class="title">Refreshments</div><div class="who">All</div></div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3 style="color:var(--son-green)">Meeting Details</h3>
+          <p><strong>Venue:</strong> Lekki Free Trade Zone, Lekki — Lagos<br><strong>Date:</strong> Tuesday 7th October, 2025<br><strong>Start:</strong> 9:30am</p>
+        </div>
+        <div class="card prayer">
+          <h3>National Prayer</h3>
+          <p>O God of creation<br>Direct our noble cause<br>Guide our leaders right<br>Help our youth the truth to know<br>In love and honesty to grow<br>And living just and true<br>Great lofty heights attain<br>To build a nation where peace<br>And justice reign.</p>
+        </div>
+      </aside>
+    </main>
+
+    <div class="download"><a class="btn" href="download/SON-SEZCAP-Agenda.pdf" download>Download Agenda (PDF)</a></div>
+
+    <footer>© Standards Organisation of Nigeria & SyncRealm Technologies 2025</footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.querySelectorAll('.event').forEach((e,i)=>{
+        setTimeout(()=>e.classList.add('show'),200*i);
+      });
+    });
+  </script>
+</body>
+</html>
